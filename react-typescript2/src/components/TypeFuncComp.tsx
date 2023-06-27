@@ -17,16 +17,16 @@ export default function TypeFuncComp(props:CounterProps) {
   const [text, setText] = useState("텍스트 작성");
   // 만약 count에 들어갈 타입이 두개이상이라면 <>안에 직접적용
   const [count, setCount] = useState<number|undefined>(5)
-  const [array, setArray] = useState([1,2,3]);
+  const [array, setArray] = useState(["id:text","1:one","2:two"]);
   return (
     <div>
-        <h3>TypeFuncComp</h3>
+        {/**<h3>TypeFuncComp</h3>}
         <p>{props.startNumber}</p>
         <p>{props.name}</p>
-        <p>{count}</p>
+        {/**<p>{count}</p>}
         <p>{text}</p>
         {/** props으로 check를 boolean 값으로 받아오기 */}
-        {props.check ? "확인" : "미확인"}
+        {/**props.check ? "확인" : "미확인"}
 
         {/** useState로 [1,2,3]만들어서 map으로출력하기 */}
         {
